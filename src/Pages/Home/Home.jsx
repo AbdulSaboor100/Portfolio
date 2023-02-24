@@ -1,10 +1,13 @@
 import React from "react";
+import MySkill from "../../Components/MySkills/MySkill";
+import Service from "../../Components/Service/Service";
 import AppLayout from "../../Layout/AppLayout";
 
 const Home = () => {
   return (
     <AppLayout>
-      <h1>HeroHeader</h1>
+      <Service />
+      <MySkill />
     </AppLayout>
   );
 };
