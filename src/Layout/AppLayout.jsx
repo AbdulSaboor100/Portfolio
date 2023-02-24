@@ -1,11 +1,14 @@
 import React, { Fragment } from "react";
+import Navbar from "../Components/Navbar/Navbar";
+import NavSm from "../Components/NavSm/NavSm";
 
 const AppLayout = ({ children }) => {
   return (
     <Fragment>
-      <p>Navbar</p>
+      <Navbar />
+      <NavSm />
       {children}
-      <p>Footer</p>
+      {/* <p>Footer</p> */}
     </Fragment>
   );
 };
