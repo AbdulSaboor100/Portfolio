@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 const NavSm = () => {
   const [bgColor, setBgColor] = useState(false);
+  const [isMenu, setIsMenu] = useState(false);
   const styleHandler = () => {
     if (window.scrollY >= 80) {
       setBgColor(true);
@@ -15,23 +16,22 @@ const NavSm = () => {
   window.addEventListener("scroll", styleHandler);
 
   return (
-    <div
-      className={`w-full fixed sm:block top-0  ${
-        bgColor ? onScrollStyling : ""
-      }`}
-    >
+    <div className={"w-full h-auto hidden sm:block"}>
       <div
-        className={`w-full h-full flex justify-between items-center  p-4 relative`}
+        className={
+          "w-full h-auto flex items-center gap-4 justify-between p-4 bg-white"
+        }
       >
-        <div>
-          <p className={`text-black font-w7 text-h5 capitalize`}>Reanan.</p>
-        </div>
-        <div className={`flex gap-7 items-center`}>
-          <i className="bx bx-menu text-h4 text-main_primary cursor-pointer"></i>
-        </div>
+        <p className={`text-black font-w7 text-h5 capitalize`}>Reanan.</p>
+        <i
+          className="bx bx-menu text-h4 text-main_primary cursor-pointer"
+          onClick={() => setIsMenu(!isMenu)}
+        ></i>
+      </div>
+      {isMenu && (
         <div
           className={
-            "w-full h-full bg-black p-4 flex flex-col gap-4 absolute left-0 right-0 bottom-0 top-16"
+            "w-full h-auto absolute top-[5rem] bg-black p-4 flex flex-col gap-3"
           }
         >
           <p className={`text-main_primary text-small font-w5 cursor-pointer`}>
@@ -48,7 +48,7 @@ const NavSm = () => {
             Contact
           </p>
         </div>
-      </div>
+      )}
     </div>
   );
 };
