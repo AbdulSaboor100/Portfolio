@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+
   theme: {
     extend: {
       backgroundImage: {
@@ -22,10 +23,18 @@ module.exports = {
       container: "1600px",
     },
     screens: {
-      sm: { max: "768px" },
-      md: { max: "1024px" },
-      lg: { max: "1200px" },
-      xl: { max: "1500px" },
+      sm: {
+        max: "768px"
+      },
+      md: {
+        max: "1024px"
+      },
+      lg: {
+        max: "1200px"
+      },
+      xl: {
+        max: "1500px"
+      },
     },
 
     fontFamily: {
