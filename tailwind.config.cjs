@@ -21,6 +21,8 @@ module.exports = {
 
     maxWidth: {
       container: "1600px",
+      m1170: "1170px",
+      m420: "420px",
     },
     screens: {
       sm: {
@@ -42,12 +44,15 @@ module.exports = {
     },
 
     fontSize: {
-      h1: ["80px", "90px"],
-      h2: ["60px", "80px"],
-      h3: ["50px", "70px"],
-      h4: ["35px", "50px"],
-      h5: ["20px", "30px"],
-      h6: ["18px", "25px"],
+      text140: ["8.75rem", "90px"],
+      h1: ["5rem", "90px"],
+      h2: ["3.75rem", "80px"],
+      h3: ["3.125rem", "70px"],
+      h4: ["2.188rem", "50px"],
+      h5: ["1.25rem", "30px"],
+      h6: ["1.125rem", "25px"],
+      p: ["1rem", "32px"],
+      small: ["14px", "20px"],
     },
     fontWeight: {
       w9: 900,
