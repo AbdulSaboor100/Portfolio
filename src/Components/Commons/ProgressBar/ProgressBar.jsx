@@ -5,20 +5,13 @@ const ProgressBar = ({ progress }) => {
     <div className="w-full">
       <div className="w-full flex justify-between">
         <p>Internet Marketing</p>
-        <p>92%</p>
+        <p>{progress}</p>
       </div>
-      <div className="w-full">
-        <input
-          style={{
-            borderLeft: progress,
-          }}
-          type="range"
-          min="1"
-          max="100"
-          step="1"
-          value="20"
-          className="w-full"
-        />
+      <div className="w-full bg-gray-200 shadow-inner ring-inset p-0">
+        <div
+          style={{ width: progress }}
+          className=" h-2.5 bg-main_primary"
+        ></div>
       </div>
     </div>
   );
