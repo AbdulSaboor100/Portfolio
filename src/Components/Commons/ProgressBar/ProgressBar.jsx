@@ -1,5 +1,4 @@
 import React from "react";
-import "./ProgressBar.scss";
 const ProgressBar = ({ progress }) => {
   return (
     <div className="w-full">

@@ -2,6 +2,8 @@ import { useFormik } from "formik";
 import React from "react";
 import Input from "../Commons/Input/Input";
 import { signUpSchema } from "../../Schema";
+import Textarea from "../Commons/Textarea/Textarea";
+import Button from "../Commons/Button/Button";
 
 const ContactUs = () => {
   const initialValues = {
@@ -23,7 +25,7 @@ const ContactUs = () => {
   return (
     <div className="w-full bg-base_dark flex justify-center items-center">
       <div className="w-4/5 pt-16 pb-16">
-        <h1 className="text-h1 font-w9 text-black2 md:text-h3">
+        <h1 className="text-h1 font-w9 text-black2 md:text-h4">
           Let's Make Great Things Together
         </h1>
         <p className="pt-4 font-w5 text-black2">
@@ -67,26 +69,20 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="pt-5 w-full">
-              <textarea
+              <Textarea
                 name="message"
                 id="message"
                 value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className="w-full mt-4 resize-none text-h6  bg-base_dark outline-0 border-b border-black2"
                 placeholder="Message"
                 rows="6"
-              ></textarea>
+              />
               {errors.message && touched.message ? (
                 <p className="text-red-700">{errors.message}</p>
               ) : null}
             </div>
-            <button
-              type="submit"
-              className="py-3 px-4  text-h6 font-w6 text-black2 mt-5 bg-main_primary"
-            >
-              Submit Now
-            </button>
+            <Button type="submit" Children={"Submit Now"} />
           </form>
         </div>
       </div>

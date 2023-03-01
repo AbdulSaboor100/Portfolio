@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import ServiceCards from "../ServiceCards/ServiceCards";
-import "./Testimonail.scss";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -98,7 +97,7 @@ const Testimonial = () => {
           </div>
         </div>
         {loaded && instanceRef.current && (
-          <div className="dots mt-6">
+          <div className="flex justify-center py-3 mt-6">
             {[
               ...Array(instanceRef.current.track.details.slides.length).keys(),
             ].map((idx) => {
@@ -109,8 +108,8 @@ const Testimonial = () => {
                     instanceRef.current?.moveToIdx(idx);
                   }}
                   className={
-                    "dot bg-main_primary" +
-                    (currentSlide === idx ? " active" : "")
+                    "border-0  w-3.5 h-3.5 bg-grey mx-1 rounded-full outline-none" +
+                    (currentSlide === idx ? " bg-main_primary" : "")
                   }
                 ></button>
               );

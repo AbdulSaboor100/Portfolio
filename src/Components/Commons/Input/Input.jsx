@@ -1,10 +1,9 @@
 import React from "react";
-import "./Input.scss";
 const Input = ({ type, placeholder, name, onBlur, onChange, value, id }) => {
   return (
-    <div className="InputWrapper">
+    <div className="InputWrapper w-full h-full">
       <input
-        className="border-b-2 border-black2"
+        className="w-full bg-transparent p-4 h-full pl-0 text-xl outline-none border-0 border-b border-black2"
         type={type}
         placeholder={placeholder}
         name={name}
