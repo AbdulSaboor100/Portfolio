@@ -19,9 +19,7 @@ const PortfolioSection = () => {
       status: "PHOTOGRAPHY",
     },
   ];
-  const [isActive, setIsActive] = useState(
-    "All"
-  );
+  const [isActive, setIsActive] = useState("All");
 
   const handleClick = (item) => {
     setIsActive(item?.status);
@@ -55,32 +53,19 @@ const PortfolioSection = () => {
                 <span className="border-b border-main_primary mt-1 border-t-2 mx-4 rounded-md"></span>
               )}
             </div>
-
           ))}
-
-         
         </div>
-       
-       
       </div>
       <div className=" w-4/5 h-full p-3 flex  mx-auto">
         <div className=" grid grid-cols-2 w-full gap-7 ">
-            <div className="border border-red-400 h-3/4">
-            {isActive === 'All' && (
-                <p>All</p>
-            )}
-            </div>
-            <div className="border border-red-400 h-3/4">
-            {isActive === 'All' && (
-                <p>All</p>
-            )}
-            </div>
-
+          <div className="border border-red-400 h-3/4">
+            {isActive === "All" && <p>All</p>}
+          </div>
+          <div className="border border-red-400 h-3/4">
+            {isActive === "All" && <p>All</p>}
+          </div>
         </div>
-        
-
-       
-        </div>
+      </div>
     </div>
   );
 };
