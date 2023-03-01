@@ -10,13 +10,13 @@ const Navbar = () => {
     }
   };
 
-  const onScrollStyling = "bg-white shadow-lg";
+  const onScrollStyling = "bg-white shadow-lg ";
 
   window.addEventListener("scroll", styleHandler);
 
   return (
     <div
-      className={`w-full fixed top-0 sm:hidden ${
+      className={`w-full z-10  fixed top-0 sm:hidden  ${
         bgColor ? onScrollStyling : ""
       }`}
     >
