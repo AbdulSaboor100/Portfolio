@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full fixed top-0 sm:hidden ${
+      className={`w-full fixed top-0 sm:hidden z-10 ${
         bgColor ? onScrollStyling : ""
       }`}
     >

@@ -6,8 +6,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         // pattern: "url('/public/Assets/bg_pattern.png')",
+        new_img:"url('/public/Assets/1.jpg')"
       },
       colors: {
+        border_grey : "#ccc" , 
         main_primary: "#FC604D",
         base_dark: "#EBEFF3",
         base_light: "#FAFAFA",
@@ -25,6 +27,9 @@ module.exports = {
       m420: "420px",
     },
     screens: {
+      xs: {
+        max: "500px"
+      },
       sm: {
         max: "768px"
       },
