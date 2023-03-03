@@ -7,10 +7,11 @@ import HeroHeader from "../../Components/HeroHeader/HeroHeader";
 import PortfolioSection from "../../Components/PortfolioSection/PortfolioSection";
 import WhymeSection from "../../Components/WhymeSection/WhymeSection";
 import AppLayout from "../../Layout/AppLayout";
+import { appData } from "../../MockData/MockData";
 
 const Home = () => {
   return (
-    <AppLayout>
+    <AppLayout data={appData}>
       <HeroHeader />
       <Service />
       <WhymeSection />
