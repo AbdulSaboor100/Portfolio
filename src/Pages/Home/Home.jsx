@@ -1,27 +1,26 @@
 import React from "react";
-import HeroHeader from "../../Components/HeroHeader/HeroHeader";
-
-import PortfolioSection from "../../Components/PortfolioSection/PortfolioSection";
-import Service from "../../Components/Service/Service";
-import WhymeSection from "../../Components/WhymeSection/WhymeSection";
-
+import ContactUs from "../../Components/ContactUs/ContactUs";
 import MySkill from "../../Components/MySkills/MySkill";
-
+import Service from "../../Components/Service/Service";
+import Testimonial from "../../Components/Testimonial/Testimonial";
+import HeroHeader from "../../Components/HeroHeader/HeroHeader";
+import PortfolioSection from "../../Components/PortfolioSection/PortfolioSection";
+import WhymeSection from "../../Components/WhymeSection/WhymeSection";
 import AppLayout from "../../Layout/AppLayout";
 import PortfolioCards from "../../Components/PortfolioCards/PortfolioCards";
+import { appData } from "../../MockData/MockData";
 
 const Home = () => {
   return (
-    <AppLayout>
+    <AppLayout data={appData}>
       <HeroHeader />
       <Service />
       <WhymeSection />
       <PortfolioSection />
       <MySkill />
-        {/* <PortfolioCards  /> */}
-
-   
-     
+      <Service />
+      <Testimonial />
+      <ContactUs />
     </AppLayout>
   );
 };
