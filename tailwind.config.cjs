@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         // pattern: "url('/public/Assets/bg_pattern.png')",
-        new_img:"url('/public/Assets/1.jpg')"
+        portfolio_1:"url('/public/Assets/1.jpg')",
+        portfolio_2:"url('/public/Assets/2.jpg')",
+        portfolio_3:"url('/public/Assets/3.jpg')",
+        portfolio_4:"url('/public/Assets/4.jpg')",
       },
       colors: {
         border_grey : "#ccc" , 
