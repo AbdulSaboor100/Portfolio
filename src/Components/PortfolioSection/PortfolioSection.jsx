@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PortfolioCards from "../PortfolioCards/PortfolioCards";
 
 const PortfolioSection = () => {
   const tabdata = [
@@ -37,7 +38,7 @@ const PortfolioSection = () => {
   // };
 
   return (
-    <div className="bg-white h-screen w-full my-32">
+    <div className="bg-white h-full w-full my-32 ">
       <div className="flex justify-center items-center">
         <div className="w-5/6 flex justify-center pb-10 ">
           {tabdata?.map((item, i) => (
@@ -56,17 +57,26 @@ const PortfolioSection = () => {
           ))}
         </div>
       </div>
-      <div className=" w-4/5 h-full p-3 flex  mx-auto">
-        <div className=" grid grid-cols-2 w-full gap-7 ">
-          <div className="border border-red-400 h-3/4">
-            {isActive === "All" && <p>All</p>}
+      <div className=" w-4/5 h-full p-3 flex  mx-auto md:w-[95%] sm:w-[90%]">
+       
+        {isActive === "All" && (
+          <div className="h-[55rem] w-full grid grid-cols-2 gap-6 xs:grid-cols-1  ">
+            {Array(4)
+              .fill()
+              .map((item) => (
+                <div className="w-full h-full">
+                  <PortfolioCards />
+                </div>
+              ))}
           </div>
-          <div className="border border-red-400 h-3/4">
+        )}
+        {/* </div> */}
+        {/* <div className="border border-red-400 h-3/4">
             {isActive === "All" && <p>All</p>}
-          </div>
-        </div>
+          </div> */}
       </div>
     </div>
+   
   );
 };
 

@@ -7,6 +7,7 @@ import HeroHeader from "../../Components/HeroHeader/HeroHeader";
 import PortfolioSection from "../../Components/PortfolioSection/PortfolioSection";
 import WhymeSection from "../../Components/WhymeSection/WhymeSection";
 import AppLayout from "../../Layout/AppLayout";
+import PortfolioCards from "../../Components/PortfolioCards/PortfolioCards";
 import { appData } from "../../MockData/MockData";
 
 const Home = () => {
