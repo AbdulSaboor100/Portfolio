@@ -1,7 +1,38 @@
+import FsLightbox from "fslightbox-react";
 import React, { useState } from "react";
 import PortfolioCards from "../PortfolioCards/PortfolioCards";
 
 const PortfolioSection = () => {
+  const [toggler, setToggler] = useState(false);
+  const [imgSources, setImgSources] = useState([]);
+  const [isActive, setIsActive] = useState("All");
+  const [portfolio, setPortfolio] = useState([
+    {
+      id: 1,
+      title: "Web Development",
+      description: "Project one",
+      img: "/Assets/1.jpg",
+    },
+    {
+      id: 2,
+      title: "Web Development",
+      description: "Project two",
+      img: "/Assets/2.jpg",
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      description: "Project three",
+      img: "/Assets/3.jpg",
+    },
+    {
+      id: 4,
+      title: "Web Development",
+      description: "Project four",
+      img: "/Assets/4.jpg",
+    },
+  ]);
+
   const tabdata = [
     {
       title: "All",
@@ -20,27 +51,90 @@ const PortfolioSection = () => {
       status: "PHOTOGRAPHY",
     },
   ];
-  const [isActive, setIsActive] = useState("All");
 
   const handleClick = (item) => {
     setIsActive(item?.status);
+    if (item?.status === "All") {
+      setPortfolio([
+        {
+          id: 1,
+          title: "Web Development",
+          description: "Project one",
+          img: "/Assets/1.jpg",
+        },
+        {
+          id: 2,
+          title: "Web Development",
+          description: "Project two",
+          img: "/Assets/2.jpg",
+        },
+        {
+          id: 3,
+          title: "Web Development",
+          description: "Project three",
+          img: "/Assets/3.jpg",
+        },
+        {
+          id: 4,
+          title: "Web Development",
+          description: "Project four",
+          img: "/Assets/4.jpg",
+        },
+      ]);
+    }
+    if (item?.status === "WEBDESIGN") {
+      setPortfolio([
+        {
+          id: 1,
+          title: "Web Development",
+          description: "Project one",
+          img: "/Assets/1.jpg",
+        },
+        {
+          id: 4,
+          title: "Web Development",
+          description: "Project four",
+          img: "/Assets/4.jpg",
+        },
+      ]);
+    }
+    if (item?.status === "PHOTOGRAPHY") {
+      setPortfolio([
+        {
+          id: 4,
+          title: "Web Development",
+          description: "Project four",
+          img: "/Assets/4.jpg",
+        },
+      ]);
+    }
+    if (item?.status === "DEVELOPMENT") {
+      setPortfolio[
+        ({
+          id: 2,
+          title: "Web Development",
+          description: "Project two",
+          img: "/Assets/2.jpg",
+        },
+        {
+          id: 4,
+          title: "Web Development",
+          description: "Project four",
+          img: "/Assets/4.jpg",
+        })
+      ];
+    }
   };
-  // const [filters, setFilters] = useState({
-  //   tab: "Email",
-  // });
 
-  // const styleHandler = (selected) => {
-  //   if (filters?.tab === selected) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // };
+  const handleCardClick = (img) => {
+    setToggler(true);
+    setImgSources([img]);
+  };
 
   return (
-    <div className="bg-white h-full w-full my-32 ">
-      <div className="flex justify-center items-center">
-        <div className="w-5/6 flex justify-center pb-10 ">
+    <div className="bg-white h-full w-full my-32  ">
+      <div className="flex justify-center items-center ">
+        <div className="w-5/6 flex justify-center pb-10  xs:flex-wrap">
           {tabdata?.map((item, i) => (
             <div className="flex flex-col mt-4 ">
               <button
@@ -57,26 +151,26 @@ const PortfolioSection = () => {
           ))}
         </div>
       </div>
-      <div className=" w-4/5 h-full p-3 flex  mx-auto md:w-[95%] sm:w-[90%]">
-       
-        {isActive === "All" && (
-          <div className="h-[55rem] w-full grid grid-cols-2 gap-6 xs:grid-cols-1  ">
-            {Array(4)
-              .fill()
-              .map((item) => (
-                <div className="w-full h-full">
-                  <PortfolioCards />
-                </div>
-              ))}
-          </div>
-        )}
-        {/* </div> */}
-        {/* <div className="border border-red-400 h-3/4">
-            {isActive === "All" && <p>All</p>}
-          </div> */}
+      <div className=" w-4/5 h-full p-3 flex  mx-auto md:w-[95%] sm:w-[90%] ">
+        <div className="h-[55rem] w-full grid grid-cols-2 gap-6 xs:grid-cols-1 sm:h-[50rem]  ">
+          {portfolio.map((item, i) => (
+            <div className="w-full max-h-[50rem]" key={i}>
+              <PortfolioCards
+                img={item?.img}
+                title={item?.title}
+                description={item?.description}
+                onClick={handleCardClick}
+              />
+            </div>
+          ))}
+        </div>
       </div>
+      <FsLightbox
+        toggler={toggler}
+        sources={imgSources}
+        onClose={() => setToggler(false)}
+      />
     </div>
-   
   );
 };
 
