@@ -1,5 +1,6 @@
 import React from "react";
 const ProgressBar = ({ progress }) => {
+
   return (
     <div className="w-full">
       <div className="w-full flex justify-between">
