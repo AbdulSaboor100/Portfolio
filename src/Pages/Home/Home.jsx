@@ -9,6 +9,7 @@ import WhymeSection from "../../Components/WhymeSection/WhymeSection";
 import AppLayout from "../../Layout/AppLayout";
 import PortfolioCards from "../../Components/PortfolioCards/PortfolioCards";
 import { appData } from "../../MockData/MockData";
+import EducationSection from "../../Components/EducationSection/EducationSection";
 
 const Home = () => {
   return (
@@ -19,8 +20,11 @@ const Home = () => {
       <PortfolioSection />
       <MySkill />
       <Service />
+      <EducationSection/>
       <Testimonial />
       <ContactUs />
+
+
     </AppLayout>
   );
 };
