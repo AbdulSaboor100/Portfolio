@@ -58,6 +58,14 @@ const Navbar = ({ data }) => {
           </p>
           <p
             className={`${
+              activeLink === "#resume" ? "text-main_primary" : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("#portfolio")}
+          >
+            <a href={"#resume"}>Resume</a>
+          </p>
+          <p
+            className={`${
               activeLink === "#about" ? "text-main_primary" : ""
             } text-small font-w5 cursor-pointer`}
             onClick={() => handleNavLink("#about")}
