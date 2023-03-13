@@ -15,16 +15,13 @@ const Home = () => {
   return (
     <AppLayout data={appData}>
       <HeroHeader />
-      <Service />
-      <WhymeSection />
       <PortfolioSection />
-      <MySkill />
       <Service />
-      <EducationSection/>
+      <EducationSection />
+      <WhymeSection />
+      <MySkill />
       <Testimonial />
       <ContactUs />
-
-
     </AppLayout>
   );
 };
