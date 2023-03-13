@@ -21,6 +21,7 @@ module.exports = {
         black2: "#313539",
         black3: "#333",
         black: "#000",
+        desc_grey : '#6c757d',
       },
     },
 
