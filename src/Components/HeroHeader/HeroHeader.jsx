@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroHeader = () => {
   return (
-    <div className={"w-full h-screen py-16 bg-base_dark "}>
+    <div className={"w-full h-screen py-16 bg-base_dark "} id={"home"}>
       <div
         className={
           "w-full h-full grid grid-cols-2 gap-4 max-w-m1170 m-auto p-4 sm:grid-cols-1"

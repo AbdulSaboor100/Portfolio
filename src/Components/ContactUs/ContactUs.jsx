@@ -23,7 +23,10 @@ const ContactUs = () => {
   console.log(errors);
 
   return (
-    <div className="w-full bg-base_dark  flex justify-center items-center">
+    <div
+      className="w-full bg-base_dark  flex justify-center items-center"
+      id={"contact"}
+    >
       <div className="w-4/5 pt-16 pb-16">
         <h1 className="text-h1 font-w9 text-black2 md:text-h4">
           Let's Make Great Things Together

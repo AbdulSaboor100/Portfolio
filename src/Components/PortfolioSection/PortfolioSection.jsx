@@ -132,7 +132,7 @@ const PortfolioSection = () => {
   };
 
   return (
-    <div className="bg-white h-full w-full my-8  ">
+    <div className="bg-white h-full w-full my-8  " id={"portfolio"}>
       <div className="flex justify-center items-center ">
         <div className="w-5/6 flex justify-center pb-10  xs:flex-wrap">
           {tabdata?.map((item, i) => (
@@ -154,7 +154,10 @@ const PortfolioSection = () => {
       <div className=" w-4/5 h-full p-3 flex mx-auto md:w-[95%] sm:w-[90%]  ">
         <div className="h-[full] w-full grid grid-cols-2 gap-6 xs:grid-cols-1 ">
           {portfolio.map((item, i) => (
-            <div className="w-full h-full max-h-[50rem] border border-red-500" key={i}>
+            <div
+              className="w-full h-full max-h-[50rem] border border-red-500"
+              key={i}
+            >
               <PortfolioCards
                 img={item?.img}
                 title={item?.title}

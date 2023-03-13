@@ -60,7 +60,10 @@ const Testimonial = () => {
     ]
   );
   return (
-    <div className="w-full flex justify-center items-center bg-base_light pt-16 pb-16">
+    <div
+      className="w-full flex justify-center items-center bg-base_light pt-16 pb-16"
+      id={"testimonial"}
+    >
       <div className="w-4/5">
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ data }) => {
   const [bgColor, setBgColor] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
   const styleHandler = () => {
     if (window.scrollY >= 80) {
       setBgColor(true);
@@ -13,6 +15,13 @@ const Navbar = ({ data }) => {
   const onScrollStyling = "bg-white shadow-lg";
 
   window.addEventListener("scroll", styleHandler);
+
+  const handleNavLink = (val) => setActiveLink(val);
+
+  useEffect(() => {
+    let hash = window.location?.hash;
+    setActiveLink(hash ? hash : "/");
+  }, []);
 
   return (
     <div
@@ -29,18 +38,47 @@ const Navbar = ({ data }) => {
           </p>
         </div>
         <div className={`flex gap-7 items-center`}>
-          <p className={`text-main_primary text-small font-w5 cursor-pointer`}>
-            Home
+          <p
+            className={`${
+              activeLink === "#home" || activeLink === "/"
+                ? "text-main_primary"
+                : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("/")}
+          >
+            <a href={"#home"}>Home</a>
           </p>
-          <p className={`text-grey text-small font-w5 cursor-pointer`}>
-            Portfolio
+          <p
+            className={`${
+              activeLink === "#portfolio" ? "text-main_primary" : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("#portfolio")}
+          >
+            <a href={"#portfolio"}>Portfolio</a>
           </p>
-          <p className={`text-grey text-small font-w5 cursor-pointer`}>About</p>
-          <p className={`text-grey text-small font-w5 cursor-pointer`}>
-            Testimonial
+          <p
+            className={`${
+              activeLink === "#about" ? "text-main_primary" : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("#about")}
+          >
+            <a href={"#about"}>About</a>
           </p>
-          <p className={`text-grey text-small font-w5 cursor-pointer`}>
-            Contact
+          <p
+            className={`${
+              activeLink === "#testimonial" ? "text-main_primary" : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("#testimonial")}
+          >
+            <a href={"#testimonial"}>Testimonial</a>
+          </p>
+          <p
+            className={`${
+              activeLink === "#contact" ? "text-main_primary" : ""
+            } text-small font-w5 cursor-pointer`}
+            onClick={() => handleNavLink("#contact")}
+          >
+            <a href={"#contact"}>Contact</a>
           </p>
         </div>
       </div>
