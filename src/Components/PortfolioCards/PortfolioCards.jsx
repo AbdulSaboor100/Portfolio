@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FsLightbox from "fslightbox-react";
+
 
 const PortfolioCards = ({ onClick, img, title, description }) => {
   const handleImages = (img) => {
