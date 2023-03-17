@@ -1,7 +1,7 @@
 import React from "react";
 const ProgressBar = ({ progress }) => {
   return (
-    <div className="w-full">
+    <div className="w-full mb-10">
       <div className="w-full flex justify-between">
         <p>Internet Marketing</p>
         <p>{progress}</p>
