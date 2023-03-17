@@ -7,10 +7,6 @@ const EducationSection = () => {
       id={"resume"}
     >
       <div className="w-5/6 h-full md:w-11/12 xs:w-11/12">
-        <h3 className="font-w9 text-h3 text-center text-black xs:text-h3 ">
-          Resume
-        </h3>
-
         <div className="grid grid-cols-2 gap-4 mt-16 h-full sm:grid-cols-1 xs:grid-cols-1">
           <div>
             <h3 className="font-w7 text-h4 text-black2 sm:text-[1.75rem]">
